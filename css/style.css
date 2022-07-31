@@ -26,13 +26,69 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
 }
 
 .menu-list li a {
     text-decoration: none;
+    color: #000;
 }
+
+.menu-list a:hover {
+    color: #FF9900;
+}
+
+.topnav {
+    display: none;
+  }
+
+.topnav.active {
+    display: block;
+    background-color: #fff6e9;
+    border-radius: 50px;
+    position: sticky;
+    height: calc(100vh - 38px);
+}
+
+
+/*BURGER*/
+
+.nav-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.nav-container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+  
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+}
+  
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/**/
 
 .in {
     border: 1px solid #BCD0E5;
@@ -298,6 +354,10 @@ h5 {
         display: flex;
         flex-direction: row;
         gap: 20px;
+    }
+
+    .nav-container {
+        display: none;
     }
 
     .menu-list li a {

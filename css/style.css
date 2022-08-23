@@ -11,7 +11,7 @@
 }
 
 .container .header {
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .container .header ul {
@@ -35,6 +35,7 @@
     line-height: 38px;
     text-align: center;
 }
+
 
 .menu-list a:hover {
     color: #FF9900;
@@ -100,8 +101,12 @@
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
-    line-height: 10px;
     cursor: pointer;
+}
+
+.in:hover {
+    color: #fff;
+    background-color: #FF9900;
 }
 
 .up {
@@ -114,8 +119,12 @@
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
-    line-height: 10px;
     cursor: pointer;
+}
+
+.up:hover {
+    color: #FF9900;
+    background-color: #fff;
 }
 
 .buttons {
@@ -134,6 +143,81 @@
     text-align: center;
     margin-top: 15px;
 }
+
+
+/**
+ * ----------------------------------------
+ * animation heartbeat
+ * ----------------------------------------
+ */
+ @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
 
 .container p {
     font-family: 'Montserrat';
@@ -158,6 +242,14 @@
     border-radius: 4px;
     margin-top: 15px;
     cursor: pointer;
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.but-start:hover {
+    animation: unset;
+    color: #FF9900;
+    background: #fff;
 }
 
 .picture {
@@ -187,6 +279,74 @@
 .icon-list img {
     margin-top: 15px;
 }
+
+.icon-list img:hover {
+    -webkit-animation: wobble-hor-bottom 0.8s both;
+	animation: wobble-hor-bottom 0.8s both;
+}
+
+/* ICON ANIMATIONS */
+
+@-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+/* ICON ANIMATIONS */
 
 .icon-list h4 {
     font-family: 'Montserrat';
@@ -227,6 +387,13 @@
     border-radius: 4px;
     margin-top: 15px;
     cursor: pointer;
+}
+
+.but-now:hover {
+    background-color: brown;
+    -webkit-box-shadow: 0px -2px 71px 12px rgba(230,148,25,1);
+    -moz-box-shadow: 0px -2px 71px 12px rgba(230,148,25,1);
+    box-shadow: 0px -2px 71px 12px rgba(230,148,25,1);
 }
 
 .container span {
@@ -337,23 +504,23 @@ h5 {
 @media only screen and (min-width: 930px) {
 
     .container {
-        max-width: 1200px;
+        max-width: 1170px;
         margin: 0 auto;
-        padding: 0;
+        padding: 0 15px;
     }
     
     .container .header {
-        margin-top: 17px;
+        padding-top: 17px;
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        gap: 198px;
+        justify-content: space-between;
     }
     
     .container .header ul {
         display: flex;
         flex-direction: row;
         gap: 20px;
+        margin-top: 0;
     }
 
     .topnav {
@@ -393,8 +560,8 @@ h5 {
 
     .container__one {
         display: flex;
-        margin-top: 70px;
-        margin-bottom: 99px;
+        padding-top: 70px;
+        padding-bottom: 99px;
     }
 
     .container__one .text {
@@ -409,8 +576,9 @@ h5 {
     }
 
     .container__one .picture {
-        width: 644px;
-        height: 495px;
+        max-width: 644px;
+        min-height: 495px;
+        margin: 0;
     }
 
     .container .title {
@@ -426,6 +594,7 @@ h5 {
         line-height: 28px;
         color: #544837;
         margin-bottom: 20px;
+        margin-top: 0;
         max-width: 490px;
     }
     
@@ -442,13 +611,12 @@ h5 {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         margin-bottom: 70px;
-        gap: 40px;
     }
 
     .icon-list li {
-        min-width: 270px;
+        max-width: 270px;
     }
     
     .icon-list img {
@@ -482,7 +650,7 @@ h5 {
     .container__three-1 .text {
         max-width: 525px;
         margin-right: 113px;
-        margin-top: 20px;
+        padding-top: 20px;
     }
 
     .container_three h3 {
@@ -507,7 +675,7 @@ h5 {
     }
 
     .list-market h5 {
-        margin-top: 30px;
+        padding-top: 30px;
     }
 
     .container__three-1 {
@@ -532,7 +700,7 @@ h5 {
     /*Product Managers*/
 
     .container__three-2 {
-        margin-top: 100px;
+        padding-top: 100px;
         margin-bottom: 100px;
         display: flex;
     }
@@ -540,7 +708,7 @@ h5 {
         display: inline-block;
         width: 50%;
         max-width: 505px;
-        margin-top: 48px;
+        padding-top: 48px;
     }
     .container__three-2 .text {
         margin-bottom: 20px;
@@ -562,7 +730,8 @@ h5 {
         zoom: 100%;
     }
     .benefits-list {
-        margin-top: 40px;
+        padding-top: 40px;
+        margin-top: 0;
     }
     .benefits-list li {
         margin-bottom: 30px;
@@ -572,7 +741,7 @@ h5 {
 
     .container__three-3 {
         display: flex;
-        margin-bottom: 171px;
+        padding-bottom: 171px;
     }
 
     .container__three-3 .text {
@@ -588,7 +757,7 @@ h5 {
 
     .container__three-3 .text ul h5 {
         margin-bottom: 15px;
-        margin-top: 30px;
+        padding-top: 30px;
     }
 
     .container_three .container__three-3 .picture {
@@ -606,7 +775,7 @@ h5 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 70px;
+        padding-bottom: 70px;
     }
     .footer .container h5 {
         font-size: 20px;
@@ -621,9 +790,14 @@ h5 {
         font-size: 16px;
         line-height: 26px;
     }
+
+    .footer ul li a:hover {
+        color: #FF9900;
+    }
+
     .footer input {
         width: 340px;
-        height: 50px;
+        min-height: 50px;
         border: 1px solid #BCD0E5;
         border-radius: 4px;
         margin-bottom: 15px;
@@ -633,7 +807,7 @@ h5 {
         flex-direction: column;
     }
     .footer button {
-        max-width: 180px;
+        max-width: 185px;
         margin-top: 25px;
         margin-bottom: 0;
     }
@@ -643,5 +817,12 @@ h5 {
 }
 
 
+    @media only screen and (max-width: 350px) {
+        .nav-flex img {
+            width: 120px;
+            height: 20px;
+            margin-top: 10px;
+        }
+    }
 
 

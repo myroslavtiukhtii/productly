@@ -610,7 +610,7 @@ h5 {
     
     .icon-list {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-direction: row;
         flex-wrap: wrap;
         margin-bottom: 70px;

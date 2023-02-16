@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < MENULINK.length; i++) {
         MENULINK[i].addEventListener('click', () => {
-            hamburger.classList.remove('active');
+          console.log('yep')
+            hamburger.classList.remove('change');
             menu.classList.remove('active');
         })
     }
